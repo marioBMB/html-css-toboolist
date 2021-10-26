@@ -1,5 +1,3 @@
-
-
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -39,8 +37,12 @@ header .logo {
     vertical-align: middle;
 }
 
-.actions {
-    margin: 15px 50px 0px 40px;
+.actions, .body {
+    margin: 10px 50px;
+}
+
+.body {
+    margin-top: 50px;
 }
 
 button {
@@ -65,9 +67,6 @@ hr {
     border: 1px solid #f6f8f9;
 }
 
-section.body {
-    padding: 2%;
-}
 
 .body h3::before {
     content: "\25BE";
@@ -85,48 +84,95 @@ ol li {
     margin-bottom: 20px;
 }
 
-li.done, li.undone {
+
+
+input {
+    display: block;
+}   
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.container input ~ .checkmark {
+    color: #f03832;
+}
+
+.container input:checked ~ .checkmark {
+    color: #64c0a9;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+.container input:checked ~ .checkmark:after {
+    left: 5px;
+    content: "\2713";
+    color: #64c0a9;
+    display: inline-block;
+    cursor:pointer;
+    text-align: center;
+}
+
+
+.container input:not(:checked) ~ .checkmark:after {
+    top: 1px;
+    left: 6px;
+    content: "\2717";
+    color: #f03832;
+    display: inline-block;
+    cursor:pointer;
+    text-align: center;
+}
+
+ol {
     list-style-type: none;
 }
 
-li.done:before {
-    content: "\2713";
-    color: #64c0a9;
-    border: 1px solid #64c0a9;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 80%;
-    padding: 4px;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    line-height: 10px;
-    margin-right: 8px;
-    cursor:pointer;
-    text-align: center;
-}
 
-
-
-li.undone:before {
-    content: "\2717";
-    color: #f03832;
-    border: 1px solid #f03832;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 80%;
-    padding: 4px;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    line-height: 10px;
-    margin-right: 8px;
-    cursor:pointer;
-    text-align: center;
-}
-
-
-.body li[role]::after {
+.body label[role]::after {
     content: attr(role);
     margin-left: 5px;
     font-size: 10px;
