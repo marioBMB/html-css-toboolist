@@ -78,10 +78,11 @@ section.body {
 
 ul {
     padding: 0;
+    margin-bottom: 30px;
 }
 
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 li.done, li.undone {
@@ -126,15 +127,33 @@ li.undone:before {
     margin-left: 5px;
     font-size: 10px;
     display: inline-block;
-    border-radius: 7px;
+    border-radius: 8px;
     padding: 4px 6px;
     color: white;
+    text-transform: capitalize;
 }
 
 [role='editorial']::after{
     background-color: #45abea;
 }
 
-[role='q1_goals']::after{
+[role='q1 goals']::after {
     background-color: #9c72e4;
 }
+
+[role='recruiting']::after {
+    background-color: #64c0a9;
+}
+
+[role='mobile']::after {
+    background-color: #f29e33;
+}
+
+[role='website']::after {
+    background-color: #d863a1;
+}
+
+[role='sales']::after {
+    background-color: #b0c926;
+}
+
