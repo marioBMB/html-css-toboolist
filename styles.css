@@ -76,12 +76,12 @@ section.body {
 }
 
 
-ul {
+ol {
     padding: 0;
     margin-bottom: 30px;
 }
 
-ul li {
+ol li {
     margin-bottom: 20px;
 }
 
@@ -102,12 +102,13 @@ li.done:before {
     display: inline-block;
     line-height: 10px;
     margin-right: 8px;
+    cursor:pointer;
 }
 
 
 
 li.undone:before {
-    content: "\2713";
+    content: "\2717";
     color: #f03832;
     border: 1px solid #f03832;
     background-color: white;
@@ -119,6 +120,7 @@ li.undone:before {
     display: inline-block;
     line-height: 10px;
     margin-right: 8px;
+    cursor:pointer;
 }
 
 
