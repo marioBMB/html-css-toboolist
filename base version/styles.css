@@ -128,8 +128,8 @@ li.undone:before {
 }
 
 
-.body li[role]::after {
-    content: attr(role);
+.body li[tag]::after {
+    content: attr(tag);
     margin-left: 5px;
     font-size: 10px;
     display: inline-block;
@@ -139,27 +139,28 @@ li.undone:before {
     text-transform: capitalize;
 }
 
-[role='editorial']::after{
+
+[tag='editorial']::after{
     background-color: #45abea;
 }
 
-[role='q1 goals']::after {
+[tag='q1 goals']::after {
     background-color: #9c72e4;
 }
 
-[role='recruiting']::after {
+[tag='recruiting']::after {
     background-color: #64c0a9;
 }
 
-[role='mobile']::after {
+[tag='mobile']::after {
     background-color: #f29e33;
 }
 
-[role='website']::after {
+[tag='website']::after {
     background-color: #d863a1;
 }
 
-[role='sales']::after {
+[tag='sales']::after {
     background-color: #b0c926;
 }
 

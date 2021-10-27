@@ -91,7 +91,7 @@ input {
 }   
 
 
-.container {
+label {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -104,7 +104,7 @@ input {
     user-select: none;
 }
 
-.container input {
+ input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -124,15 +124,15 @@ input {
     border-style: solid;
 }
 
-.container input ~ .checkmark {
+label input ~ .checkmark {
     color: #f03832;
 }
 
-.container input:checked ~ .checkmark {
+label input:checked ~ .checkmark {
     color: #64c0a9;
 }
 
-.container:hover input ~ .checkmark {
+label:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
@@ -142,12 +142,12 @@ input {
     display: none;
 }
 
-.container input:checked ~ .checkmark:after {
+label input:checked ~ .checkmark:after {
     display: block;
 }
 
 
-.container input:checked ~ .checkmark:after {
+label input:checked ~ .checkmark:after {
     left: 5px;
     content: "\2713";
     color: #64c0a9;
@@ -157,7 +157,7 @@ input {
 }
 
 
-.container input:not(:checked) ~ .checkmark:after {
+label input:not(:checked) ~ .checkmark:after {
     top: 1px;
     left: 6px;
     content: "\2717";
@@ -172,8 +172,8 @@ ol {
 }
 
 
-.body label[role]::after {
-    content: attr(role);
+.body label[tag]::after {
+    content: attr(tag);
     margin-left: 5px;
     font-size: 10px;
     display: inline-block;
@@ -183,27 +183,27 @@ ol {
     text-transform: capitalize;
 }
 
-[role='editorial']::after{
+[tag='editorial']::after{
     background-color: #45abea;
 }
 
-[role='q1 goals']::after {
+[tag='q1 goals']::after {
     background-color: #9c72e4;
 }
 
-[role='recruiting']::after {
+[tag='recruiting']::after {
     background-color: #64c0a9;
 }
 
-[role='mobile']::after {
+[tag='mobile']::after {
     background-color: #f29e33;
 }
 
-[role='website']::after {
+[tag='website']::after {
     background-color: #d863a1;
 }
 
-[role='sales']::after {
+[tag='sales']::after {
     background-color: #b0c926;
 }
 
